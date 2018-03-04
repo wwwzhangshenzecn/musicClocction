@@ -1,4 +1,5 @@
-﻿from Collection import Collection
+from Collection import Collection
+import os
 '''
 rootPath:需存放的音乐文件夹
 copuPath:需整理的音乐文件夹
@@ -8,8 +9,10 @@ Time:2018/1/17
 function:分类音乐文件
 '''
 if __name__ == "__main__":
-    rootPath = "G:\\Music\\"  # 存放文件夹
-    copyPath = "G:\\newMusic\\"  # 整理文件夹
+    # rootPath = "G:\\Music\\"  # 存放文件夹
+    rootPath = os.path.abspath(os.path.dirname(__file__))
+    copyPath = os.path.abspath(os.path.dirname(__file__))
+    # copyPath = "G:\\newMusic\\"  # 整理文件夹
     loseList = []
     count = [0]
     Collection(copyPath,rootPath,loseList,count)
