@@ -62,6 +62,8 @@ def CollectMusic(path,rootPath,loseList=[],count=[0]):
 
 
 
+
+
 def Collection(copyPath,rootPath,loseList=[],count=[0]):
     start = time.time()
     CollectMusic(copyPath, rootPath, loseList, count)
