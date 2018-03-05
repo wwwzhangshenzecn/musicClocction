@@ -1,8 +1,7 @@
 from Collection import Collection
 import os
 '''
-rootPath:需存放的音乐文件夹
-copuPath:需整理的音乐文件夹
+将本文件放入需整理的文件夹中，运行即可。
 Author:zhangze
 Place:WIT_636
 Time:2018/1/17
