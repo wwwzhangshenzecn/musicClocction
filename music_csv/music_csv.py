@@ -48,6 +48,6 @@ def write(row):
     write.writerow(('Name', 'Author','Path','Time'))
     for n in row:
         write.writerow(n)
-        print(n,end='\n',flush="false")
+        #print(n,end='\n',flush="false")
     csvfile.close()
 
