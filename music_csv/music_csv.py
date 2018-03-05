@@ -13,7 +13,7 @@ def getID3(str_filename):
     t =time.strftime('%Y-%m-%d %X', time.localtime(time.time()))
     path =str(os.path.abspath(str_filename))
     path=path.replace('\\','\\\\')
-    print(path)
+    print("\r"+str_filename)
     row=(name,author,path,t)
     return row
 
