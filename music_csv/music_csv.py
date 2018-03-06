@@ -80,4 +80,4 @@ def write(row):
         tfile.write('\n')
         #print(n,end='\n',flush="false")
     csvfile.close()
-
+    tfile.close()
