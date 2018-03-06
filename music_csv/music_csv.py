@@ -7,7 +7,13 @@ from mutagen.easyid3 import EasyID3
 from mutagen import File
 
 def getID3(str_filename,pathTemp):
-    audiofile = MP3(pathTemp, ID3=EasyID3)
+    try:
+        audiofile = MP3(pathTemp, ID3=EasyID3)
+       #print(audiofile)
+    except:
+        print("读取失败")
+        row=()
+        return row
 
     try:
         Album =audiofile['album'][0]
@@ -28,7 +34,7 @@ def getID3(str_filename,pathTemp):
     t =time.strftime('%Y-%m-%d %X', time.localtime(time.time())) #添加时间
     path =str(os.path.abspath(str_filename))
     path=path.replace('\\','\\\\')
-    print(path)
+    print('\t---'+path)
     try:
         #读取封面
         temppath =os.path.abspath(os.path.dirname(pathTemp))
