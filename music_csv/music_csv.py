@@ -28,7 +28,7 @@ def getID3(str_filename,pathTemp):
     t =time.strftime('%Y-%m-%d %X', time.localtime(time.time())) #添加时间
     path =str(os.path.abspath(str_filename))
     path=path.replace('\\','\\\\')
-    # print(path)
+    print(path)
     try:
         #读取封面
         temppath =os.path.abspath(os.path.dirname(pathTemp))
