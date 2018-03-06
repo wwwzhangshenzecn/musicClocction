@@ -38,7 +38,7 @@ def getID3(str_filename,pathTemp):
         img =open(temppath+'\\\\'+Title+'.jpg','wb')
         img.write(imgfile)
         Imgpath = str(os.path.abspath(Title + '.jpg'))
-        Imgpath.replace('\\','\\\\')
+        Imgpath=Imgpath.replace('\\','\\\\')
     except: Imgpath=""
 
     row=(Title,Artist,Album,Albumartist,Date,path,Imgpath,t)
